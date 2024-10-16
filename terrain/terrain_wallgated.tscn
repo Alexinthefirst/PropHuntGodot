@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d088g48uvqhb7"]
+
+[ext_resource type="PackedScene" uid="uid://bj16fhf5bolen" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_gated.gltf" id="1_bha2g"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ejykw"]
+points = PackedVector3Array(2, 4, 0.5, 2, 0, 0.5, 2, 4, -0.5, -2, 4, 0.5, 2, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, -2, 0, -0.5)
+
+[node name="terrain_wallgated" instance=ExtResource("1_bha2g")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_ejykw")

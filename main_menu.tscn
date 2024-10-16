@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1kpk623vubo3"]
+
+[ext_resource type="PackedScene" uid="uid://d308181an7gy0" path="res://Menu.tscn" id="1_wufwr"]
+
+[node name="MainMenu" type="Node3D"]
+
+[node name="Menu" parent="." instance=ExtResource("1_wufwr")]
+
+[node name="Level" type="Node" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://world.tscn")
+spawn_path = NodePath("../Level")
+spawn_limit = 1

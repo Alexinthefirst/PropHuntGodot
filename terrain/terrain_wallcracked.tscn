@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://18rwxtcvfpx1"]
+
+[ext_resource type="PackedScene" uid="uid://dnotgnkba3qex" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_cracked.gltf" id="1_q8xei"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ovs7f"]
+points = PackedVector3Array(-2, 0, -0.500132, -1.79679, 0.412686, -0.589507, -1.63352, 0.308144, -0.618723, -1.59515, 0.293265, -0.624641, -1.59515, 0.268598, -0.614409, 1.99995, 0, -0.500132, -2, 0, 0.499885, -2, 4, -0.500132, 1.4005, 0.372357, -0.629695, 1.5857, 0.309319, -0.617614, 1.99995, 0, 0.499885, 1.62642, 0.303837, -0.614285, 1.99995, 4, -0.500132, 1.59471, 0.268598, 0.614285, 1.59471, 0.293265, 0.624517, -1.58614, 0.309319, 0.617491, -1.62686, 0.303837, 0.614162, -2, 4, 0.499885, 1.79635, 0.412686, 0.589383, 1.63269, 0.308144, 0.6186, 1.99995, 4, 0.499885, -1.40095, 0.372357, 0.629695)
+
+[node name="terrain_wallcracked" instance=ExtResource("1_q8xei")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_ovs7f")

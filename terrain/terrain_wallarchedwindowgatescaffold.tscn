@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciqs78s28nebi"]
+
+[ext_resource type="PackedScene" uid="uid://366uliilocnt" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_archedwindow_gated_scaffold.gltf" id="1_7u6hu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vxlnk"]
+points = PackedVector3Array(2, 4, 0.5, 2, 0, 0.5, 2, 4, -0.5, -2, 4, 0.5, 2, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, -2, 0, -0.5)
+
+[node name="terrain_wallarchedwindowgatescaffold" instance=ExtResource("1_7u6hu")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_vxlnk")

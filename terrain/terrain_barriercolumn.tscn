@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce7nudhg5www6"]
+
+[ext_resource type="PackedScene" uid="uid://dcg6kr7fc21g2" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/barrier_column.gltf" id="1_g50i2"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5xw1d"]
+points = PackedVector3Array(-2.55108e-05, 1.4, -5.30481e-06, 0.349617, 1.19992, 0.349989, 1.99995, 1.07494, 0.249952, 1.99995, 1.09988, 0.187462, 1.99995, 1.09988, -0.187542, 1.99995, 1.07494, -0.250031, 0.349617, 1.19992, -0.35, -0.35006, 1.19992, -0.35, -2, 1.07494, -0.250031, -2, 1.09988, -0.187542, -2, 1.09988, 0.187462, -2, 1.07494, 0.249952, -0.35006, 1.19992, 0.349989, 0.349617, 0, 0.349989, 1.99995, 0, 0.249952, 1.99995, 0, -0.250031, 0.349617, 0, -0.35, -0.35006, 0, -0.35, -2, 0, -0.250031, -2, 0, 0.249952, -0.35006, 0, 0.349989)
+
+[node name="terrain_barriercolumn" instance=ExtResource("1_g50i2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_5xw1d")

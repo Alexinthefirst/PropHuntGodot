@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://chtrx66hc3su"]
+
+[ext_resource type="PackedScene" uid="uid://btgwawch6wsrj" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_pillar.gltf" id="1_cp0lq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3lihk"]
+points = PackedVector3Array(-2, 0, -0.500098, -0.35006, 0, -0.75, -2, 0, 0.499951, -2, 4, -0.500098, 0.349617, 0, -0.75, -0.35006, 4, -0.75, -0.35006, 0, 0.75, -2, 4, 0.499951, 1.99995, 0, -0.500098, 0.349617, 4, -0.75, 0.349617, 0, 0.75, -0.35006, 4, 0.75, 1.99995, 0, 0.499951, 1.99995, 4, -0.500098, 0.349617, 4, 0.75, 1.99995, 4, 0.499951)
+
+[node name="terrain_wallpillar" instance=ExtResource("1_cp0lq")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_3lihk")

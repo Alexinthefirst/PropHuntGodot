@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbyug4xy56uka"]
+
+[ext_resource type="Script" path="res://HUD.gd" id="1_0w705"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0w705")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -7.0
+offset_right = 7.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 6.0
+offset_right = 155.0
+offset_bottom = 200.0
+
+[node name="HealthBar" type="ProgressBar" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 200)
+layout_mode = 2
+step = 25.0
+value = 100.0
+fill_mode = 3
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.435294)
+custom_minimum_size = Vector2(125, 200)
+layout_mode = 2
+
+[node name="ConnectedPlayers" type="VBoxContainer" parent="HBoxContainer/Panel"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 61.0
+offset_bottom = 27.0
+
+[node name="PlayersLabel" type="Label" parent="HBoxContainer/Panel/ConnectedPlayers"]
+layout_mode = 2
+text = "Players:"
+
+[node name="HunterBlindness" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -13.0
+offset_top = -11.0
+offset_right = 28.0
+offset_bottom = 671.0
+scale = Vector2(28.72, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="RoleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "ROLE: PROP"

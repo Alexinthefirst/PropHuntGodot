@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ojmuf2dlccqw"]
+
+[ext_resource type="PackedScene" uid="uid://dyfj5pd7fiy64" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_doorway.gltf" id="1_hwh7d"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_actqj"]
+points = PackedVector3Array(-2, 0, -0.5, 1.99995, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, 1.99995, 0, 0.5, 1.99995, 4, -0.5, -2, 4, 0.5, 1.99995, 4, 0.5)
+
+[node name="terrain_walldoorway" instance=ExtResource("1_hwh7d")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_actqj")

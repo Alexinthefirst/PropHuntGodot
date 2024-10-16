@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcdc0fcxp4avj"]
+
+[ext_resource type="PackedScene" uid="uid://c67be017yrx2g" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/floor_wood_small.gltf" id="1_52m70"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l7odv"]
+points = PackedVector3Array(-1, -0.1, -1, -1, -0.1, 1, -1, 0.0249951, -1, 1, -0.1, -1, -1, 0.0249951, 1, 1, -0.1, 1, -1, 0.05, -0.475137, -0.975137, 0.05, -0.975137, 1, 0.0249951, -1, -1, 0.05, 0.974941, 1, 0.0249951, 1, 0.974941, 0.05, -0.975137, 1, 0.05, -0.475137, 1, 0.05, 0.974941)
+
+[node name="terrain_floorwoodsmall" instance=ExtResource("1_52m70")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_l7odv")

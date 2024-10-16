@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbh2gjl6rbf6l"]
+
+[ext_resource type="PackedScene" uid="uid://cg0vx0tn683ak" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_half_endcap_sloped.gltf" id="1_546wh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xbx5j"]
+points = PackedVector3Array(-2, 0, -0.5, 0, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, 0, 0, 0.5, 0, 0.249804, -0.5, -2, 4, 0.5, -0.900157, 4, -0.5, 0, 0.249804, 0.5, -0.900157, 4, 0.5)
+
+[node name="terrain_wallendcapsloped" instance=ExtResource("1_546wh")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_xbx5j")

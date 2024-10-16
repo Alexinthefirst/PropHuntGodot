@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://73jbjxbree1r"]
+
+[ext_resource type="PackedScene" uid="uid://dwu1y8kajkocg" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/table_long.gltf" id="1_eneir"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_714x5"]
+points = PackedVector3Array(1, 0.974941, 0.659358, 1, 0.974941, -1.97533, 0.974941, 1, 1.97494, 0.999804, 0.974941, 1.97494, 0.899961, 8.19564e-08, 1.87471, 0.974941, 0.799922, -1.97533, 0.974941, 0.974941, -2, 0.974941, 1, -1.97533, 0.899961, 8.19564e-08, -1.8751, -0.975137, 1, 1.97494, 0.974941, 0.974941, 1.99961, 0.974941, 0.799922, 1.97494, 0.874902, 8.19564e-08, 1.89977, 0.874902, 8.19564e-08, -1.90016, -0.975137, 0.974941, -2, -0.975137, 1, -1.97533, -1, 0.974941, 1.97494, -0.975137, 0.974941, 1.99961, -0.875098, 8.19564e-08, 1.89977, -0.875098, 8.19564e-08, -1.90016, -0.975137, 0.799922, -1.97533, -1, 0.974941, -1.97533, -0.900157, 8.19564e-08, 1.87471, -0.975137, 0.799922, 1.97494, -0.900157, 8.19564e-08, -1.8751)
+
+[node name="prop_tablelong" groups=["props"] instance=ExtResource("1_eneir")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_714x5")

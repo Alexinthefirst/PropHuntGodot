@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://d308181an7gy0"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_2qu1i"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2qu1i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameBox" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+placeholder_text = "Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="IPAddress" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 20)
+layout_mode = 2
+text = "127.0.0.1"
+scroll_fit_content_height = true
+
+[node name="Join" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Join
+"
+
+[node name="Create" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Create
+"
+
+[connection signal="text_changed" from="VBoxContainer/NameBox" to="." method="_on_name_box_text_set"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="VBoxContainer/Create" to="." method="_on_create_pressed"]
